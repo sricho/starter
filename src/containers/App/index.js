@@ -20,9 +20,4 @@ App.propTypes = {
   hello: PropTypes.string,
 }
 
-App.defaultProps = {
-  env: __NODE_ENV__, // eslint-disable-line no-undef
-  hello: __HELLO__, // eslint-disable-line no-undef
-}
-
 export default App

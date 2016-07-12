@@ -9,7 +9,7 @@ describe('<App />', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<App env="crazyland" />)
+    wrapper = shallow(<App hello="crazyland" env="test" />)
   })
 
   it('has a .root class', () => {
@@ -21,7 +21,7 @@ describe('<App />', () => {
   })
 
   it('displays the environment', () => {
-    expect(wrapper).to.contain.text('Environment: crazyland')
+    expect(wrapper).to.contain.text('crazyland')
   })
 
   it('displays some content in paragraphs', () => {
