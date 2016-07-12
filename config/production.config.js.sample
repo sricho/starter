@@ -1,5 +1,5 @@
 /* eslint-disable */
 
-hello = 'Hello!'
+hello = 'Hello! You built me!'
 
 /* eslint-enable */

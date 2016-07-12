@@ -93,16 +93,15 @@ config.module.loaders.push({
 })
 
 // Env
-const dotEnvVars = dotenv.config()
 const environmentEnv = dotenv.config({
   path: join(root, 'config', `${NODE_ENV}.config.js`),
   silent: true,
 })
-const envVariables = Object.assign({}, dotEnvVars, environmentEnv)
-const defines = Object.keys(envVariables)
+
+const defines = Object.keys(environmentEnv)
   .reduce((m, key) => {
     const memo = m
-    const val = JSON.stringify(envVariables[key])
+    const val = JSON.stringify(environmentEnv[key])
     memo[`__${key.toUpperCase()}__`] = val
     return memo
   }, {
