@@ -5,3 +5,4 @@ dist/
 config/production.config.js
 config/development.config.js
 *.log
+reports/
