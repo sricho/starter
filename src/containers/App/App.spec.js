@@ -20,8 +20,12 @@ describe('<App />', () => {
     expect(wrapper.find('h1')).to.have.length(1)
   })
 
-  it('displays the environment', () => {
+  it('displays the hello message', () => {
     expect(wrapper).to.contain.text('crazyland')
+  })
+
+  it('displays the env', () => {
+    expect(wrapper).to.contain.text('test')
   })
 
   it('displays some content in paragraphs', () => {
